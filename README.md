@@ -1,4 +1,5 @@
-#Resume-Builder
+Resume-Builder
+<br>
 Resume Builder is a Django-based web application designed to generate both single and bulk resumes using pre-defined formats. It eliminates the manual effort required to create resumes in MS Word and introduces automation by uploading Excel data to generate multiple resumes at once.
 <br>
 
