@@ -1,0 +1,119 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	{% comment %} <link href="{% static 'css/temp2.css'%}" media="all" rel="stylesheet" type="text/css"> {% endcomment %}
+</head>
+<body >
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    
+<div class="resume" >
+   <div class="resume_left">
+     <!-- <div class="resume_profile"> -->
+       <!-- <img src="10.jpg" alt="profile_pic"> -->
+     <!-- </div> -->
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+         <div class="title">
+          <img class="profile_pic" src="{% static 'img/profiles/'%}{{image}}.jpg" width="200px" height="400px" alt="{{image }}">
+           <p class="bold">{{data1.Name}}</p>
+           <p >{{data1.Role}}</p>
+         </div>
+         <ul>
+           <li>
+             <div class="data">
+               {{data1.Email}}  
+             </div>
+           </li>
+           <li>
+             <div class="data">
+               {{data1.Mob}}
+             </div>
+           </li>
+           <li>
+             <div class="data">
+               {{data1.Address}}
+             </div>
+           </li>
+         </ul>
+       </div>
+       <div class="resume_item resume_skills">
+         <div class="title">
+           <p class="bold">skill's</p>
+         </div>
+         <ul>
+          {%for i in data1.Skills%}
+           <li>
+             
+               -{{i}}
+             
+           </li>
+           {%endfor%}
+         </ul>
+       </div>
+       <div class="resume_item resume_social">
+         <div class="title">
+           <p class="bold">Hobbies</p>
+         </div>
+         <ul>
+          {%for i in data1.Hobbies%}
+           <li>
+             {% comment %} <div class="data"> {% endcomment %}
+               <p class="semi-bold">-{{i}}</p>
+               {% comment %} <p>Stephen@facebook</p> {% endcomment %}
+             {% comment %} </div> {% endcomment %}
+           </li>
+           {%endfor%}
+         </ul>
+       </div>
+     </div>
+  </div>
+  <div class="resume_right">
+    <!-- <div class="resume_item resume_about">
+        <div class="title">
+           <p class="bold">About us</p>
+         </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa officia totam atque exercitationem inventore repudiandae?</p>
+    </div> -->
+   
+    <div class="resume_item resume_education">
+      <div class="title">
+           <p class="bold">Education</p>
+         </div>
+      <ul>
+        {%for i in data1.school%}
+            <li>
+                <div class="date">{{i.t}}</div> 
+                <div class="info">
+                     <p class="semi-bold">{{i.n}}-{{i.a}}-{{i.g}}</p> 
+                </div>
+            </li>
+            {%endfor%}
+        </ul>
+    </div>
+    <div class="resume_item resume_work">
+      <div class="title">
+         <p class="bold">Projects and Interships</p>
+       </div>
+      <ul>
+        {%for i in data1.Projects%}
+          <li>
+              <div class="date">{{i.n}}</div> 
+              <div class="info">
+                   {% comment %} <p class="semi-bold">Lorem ipsum dolor sit amet.</p>  {% endcomment %}
+                <p>{{i.d}}</p>
+              </div>
+          </li>
+          {%endfor%}
+      </ul>
+  </div>
+</div> 
+    <!-- <script src="js.js"></script> -->
+<!-- <input type="button" onclick="PrintDiv()" value="Print" />   -->
+</body>
+</html>

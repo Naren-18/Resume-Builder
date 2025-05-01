@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - eNno Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png'%}" rel="icon">
+  <link href="img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: eNno - v4.7.0
+  * Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    
+<!-- <link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/> -->
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css"
+rel="stylesheet"
+/>
+<style>
+    @media (min-width: 1025px) {
+       
+        }
+        .card-registration .select-input.form-control[readonly]:not([disabled]) {
+        font-size: 1rem;
+        line-height: 2.15;
+        padding-left: .75em;
+        padding-right: .75em;
+        }
+        .card-registration .select-arrow {
+        top: 13px;
+        }
+        
+        .gradient-custom-2 {
+        /* fallback for old browsers */
+        
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgb(156 243 172 / 62%), rgb(201 224 206));
+        }
+        
+        .bg-indigo {
+background-color: #16df7e;
+        }
+        @media (min-width: 992px) {
+        .card-registration-2 .bg-indigo {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        }
+        }
+        @media (max-width: 991px) {
+        .card-registration-2 .bg-indigo {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        }
+        }
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+   <!-- ======= Header ======= -->
+   <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Resume Builder</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="{% url 'index'%}">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'form'%}">Create Your Resume</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#services">Services</a></li> -->
+          <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+          
+          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+          <li><a class="getstarted scrollto" href="{% url 'upload'%}">Upload File</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <!-- <section id="portfolio-details" class="portfolio-details"> -->
+      <!-- <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="img/portfolio/portfolio-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="img/portfolio/portfolio-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="img/portfolio/portfolio-3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>This is an example of portfolio detail</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div> -->
+    <!-- </section> -->
+    <!-- End Portfolio Details Section -->
+    <form method="post">
+      <section class="h-100 h-custom gradient-custom-2" style="margin-top:71px;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12">
+              <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                <div class="card-body p-0">
+                  <div class="row g-0">
+                    <div class="col-lg-6">
+                      <div class="p-5">
+                        <h3 class="fw-normal mb-5" style="color: #16df7e;">General Infomation</h3>
+                      
+                      
+                        <div class="row">
+                          <div class="col-md-6 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text"  id="" name="name"  id="form3Examplev2" class="form-control form-control-lg" />
+                              <label class="form-label"  for="name">Name</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" id="role" name="role" class="form-control form-control-lg" />
+                              <label class="form-label" for="role">Role</label>
+                            </div>
+                          
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text"id="email" name="email" class="form-control form-control-lg" />
+                              <label class="form-label" for="email">Email</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" id="mob" name="mob"  class="form-control form-control-lg" />
+                              <label class="form-label" for="mob">Phone</label>
+                            </div>
+                          
+                          </div>
+                        </div>
+                      
+                      
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline">
+                            <input type="text"  id="Address" name="Address"  class="form-control form-control-lg" />
+                            <label class="form-label" for="Address">Address</label>
+                          </div>
+                        </div>
+
+                        <h3 class="fw-normal mb-5" style="color: #16df7e;">Eduacation Infomation</h3>
+                        <h5 class="fw-normal " style="color: #16df7e; ">10th</h5>
+
+                        <div class="row">
+                          <div class="col-md-4 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" id="1school" name="1school"class="form-control form-control-lg" />
+                              <label class="form-label" for="1school">School name </label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-4 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" id="1add" name="1add"class="form-control form-control-lg" />
+                              <label class="form-label" for="1add">University</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-4 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" iid="1gpa" name="1gpa" class="form-control form-control-lg" />
+                              <label class="form-label" for="1gpa">GPA</label>
+                            </div>
+                          
+                          </div>
+                        </div>
+                        <h5 class="fw-normal " style="color: #16df7e; ">Intermediate</h5>
+
+                        <div class="row">
+                          <div class="col-md-4 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" id="2school" name="2school"class="form-control form-control-lg" />
+                              <label class="form-label" for="2school">School name </label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-4 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" id="2add" name="2add"class="form-control form-control-lg" />
+                              <label class="form-label" for="2add">University</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-4 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" iid="2gpa" name="2gpa" class="form-control form-control-lg" />
+                              <label class="form-label" for="2gpa">GPA</label>
+                            </div>
+                          
+                          </div>
+                        </div>
+                        <h5 class="fw-normal " style="color: #16df7e; ">B.Tech</h5>
+
+                        <div class="row">
+                          <div class="col-md-4 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" id="3school" name="3school"class="form-control form-control-lg" />
+                              <label class="form-label" for="3school">School name </label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-4 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" id="3add" name="3add"class="form-control form-control-lg" />
+                              <label class="form-label" for="3add">University</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-4 mb-4 pb-2">
+                          
+                            <div class="form-outline">
+                              <input type="text" iid="3gpa" name="3gpa" class="form-control form-control-lg" />
+                              <label class="form-label" for="3gpa">GPA</label>
+                            </div>
+                          
+                          </div>
+                        </div>
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline">
+                            <input type="text" id="skills" name="skills" class="form-control form-control-lg" />
+                            <label class="form-label" for="skills">Skills</label>
+                          </div>
+                        </div>
+                        <div class="mb-4 pb-2">
+                          <div class="form-outline">
+                            <input type="text" id="hobbies" name="hobbies"  class="form-control form-control-lg" />
+                            <label class="form-label" for="hobbies">Hobbies</label>
+                          </div>
+                        </div>
+                      
+                      </div>
+                    </div>
+                    <div class="col-lg-6 bg-indigo text-white">
+                      <div class="p-5">
+
+                        <h3 class="fw-normal mb-5">Experience</h3>
+                      
+                        <!-- <div class="mb-4 pb-2">
+                          <div class="form-outline form-white">
+                            <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Examplea2">Street + Nr</label>
+                          </div>
+                        </div> -->
+                      
+                        <!-- <div class="mb-4 pb-2">
+                          <div class="form-outline form-white">
+                            <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Examplea3">Additional Information</label>
+                          </div>
+                        </div> -->
+                        <h5 class="fw-normal ">Company-1</h5>
+
+                        <div class="row">
+                          <div class="col-md-3 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="1company" name="1company" class="form-control form-control-lg" />
+                              <label class="form-label" for="1company">Name</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-3 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text"id="1title" name="1title" class="form-control form-control-lg" />
+                              <label class="form-label" for="1title">Job Title</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-3 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="1years" name="1years" class="form-control form-control-lg" />
+                              <label class="form-label" for="1years">From-to</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-3 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="1city" name="1city"  class="form-control form-control-lg" />
+                              <label class="form-label" for="1city">City</label>
+                            </div>
+                          
+                          </div>
+                        </div>
+                        <h5 class="fw-normal ">Company-2</h5>
+                        <div class="row">
+                          <div class="col-md-3 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="2company" name="2company" class="form-control form-control-lg" />
+                              <label class="form-label" for="2company">Name</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-3 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text"id="2title" name="2title" class="form-control form-control-lg" />
+                              <label class="form-label" for="2title">Job Title</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-3 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="2years" name="2years" class="form-control form-control-lg" />
+                              <label class="form-label" for="2years">From-to</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-3 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="2city" name="2city"  class="form-control form-control-lg" />
+                              <label class="form-label" for="2city">City</label>
+                            </div>
+                          
+                          </div>
+                        </div>
+                        {% comment %} <h3 class="fw-normal mb-5">Projects</h3>
+                        <h5 class="fw-normal ">Project-1</h5>
+
+                        <div class="row">
+
+                          <div class="col-md-6 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
+                              <label class="form-label" for="form3Examplea5">Project Name</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
+                              <label class="form-label" for="form3Examplea5">Project description</label>
+                            </div>
+                          
+                          </div>
+                        </div>
+                        <h5 class="fw-normal ">Project-2x</h5>
+
+                        <div class="row">
+
+                          <div class="col-md-6 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
+                              <label class="form-label" for="form3Examplea5">Project Name</label>
+                            </div>
+                          
+                          </div>
+                          <div class="col-md-6 mb-4 pb-2">
+                          
+                            <div class="form-outline form-white">
+                              <input type="text" id="form3Examplea5" class="form-control form-control-lg" />
+                              <label class="form-label" for="form3Examplea5">Project description</label>
+                            </div>
+                          
+                          </div>
+                        </div>
+       {% endcomment %}
+                        <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                          <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" />
+                          <label class="form-check-label text-white" for="form2Example3">
+                            I do accept the <a href="#!" class="text-white"><u>Terms and Conditions</u></a> of your
+                            site.
+                          </label>
+                        </div>
+                      
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container">
+
+          <div class="section-title">
+            <span>Templates</span>
+            <h2>Templates</h2>
+            <p>Select a Template</p>
+          </div>
+
+
+          <div class="carousel-wrapper">
+            <div class="carousel" data-flickity>
+              <div class="carousel-cell">
+                <img src="{% static 'img/templates/template1.jpg'%}" onclick="select1()" id="temp1" width="500px" height="600px" />
+                <input type="hidden" name="temp1" id="t1">
+              </div>
+              <div class="carousel-cell">
+                <img src="{% static 'img/templates/template2.jpg'%}"onclick="select2()" id="temp2" width="500px" height="600px" />
+                <input type="hidden" name="temp2" id="t2">
+
+              </div>
+              <div class="carousel-cell">
+                <img src="{% static 'img/templates/template3.jpg'%}" onclick="select3()" id="temp3"width="500px" height="600px" />
+                <input type="hidden" name="temp3" id="t3">
+              
+              </div>
+              <div class="carousel-cell">
+                <img src="{% static 'img/templates/template4.jpg'%}" onclick="select4()" id="temp4"width="500px" height="600px" />
+                <input type="hidden" name="temp4" id="t4">
+              
+              </div>
+              <div class="carousel-cell">
+                <img src="{% static 'img/templates/template5.jpg'%}" onclick="select5()"id="temp5" width="500px" height="600px" />
+                <input type="hidden" name="temp5" id="t5">
+              
+              </div>
+            </div>
+          </div>
+x
+        </div>
+
+        <input type="submit" class="btn btn-light btn-lg"
+        data-mdb-ripple-color="dark" style="    position: relative;
+        left: 46%;
+        top: 48px; background:rgb(124, 236, 124)" value="Generate Resume">
+      </section><!-- End Contact Section -->
+    </form>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row  justify-content-center">
+          <div class="col-lg-6">
+            <h3>eNno</h3>
+            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+          </div>
+        </div>
+
+        <div class="row footer-newsletter justify-content-center">
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>eNno</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/enno-free-simple-bootstrap-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/purecounter/purecounter.js'%}'%}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js'%}"></script>
+  <script>
+    document.getElementById('t1').value="False";
+    document.getElementById('t2').value="False";
+    document.getElementById('t3').value="False";
+    document.getElementById('t4').value="False";
+    document.getElementById('t5').value="False";
+
+    function select1(){
+      document.getElementById('temp1').style.opacity = "0.3";
+      document.getElementById('temp2').style.opacity = "1";
+      document.getElementById('temp3').style.opacity = "1";
+      document.getElementById('temp4').style.opacity = "1";
+      document.getElementById('temp5').style.opacity = "1";
+
+      document.getElementById('t1').value="True";
+    document.getElementById('t2').value="False";
+    document.getElementById('t3').value="False";
+    document.getElementById('t4').value="False";
+    document.getElementById('t5').value="False";
+
+    }
+    function select2(){
+      document.getElementById('temp1').style.opacity = "1";
+      document.getElementById('temp2').style.opacity = "0.3";
+      document.getElementById('temp3').style.opacity = "1";
+      document.getElementById('temp4').style.opacity = "1";
+      document.getElementById('temp5').style.opacity = "1";
+      document.getElementById('t1').value="False";
+    document.getElementById('t2').value="True";
+    document.getElementById('t3').value="False";
+    document.getElementById('t4').value="False";
+    document.getElementById('t5').value="False";
+    }
+    function select3(){
+      document.getElementById('temp1').style.opacity = "1";
+      document.getElementById('temp2').style.opacity = "1";
+      document.getElementById('temp3').style.opacity = "0.3";
+      document.getElementById('temp4').style.opacity = "1";
+      document.getElementById('temp5').style.opacity = "1";
+      document.getElementById('t1').value="False";
+    document.getElementById('t2').value="False";
+    document.getElementById('t3').value="True";
+    document.getElementById('t4').value="False";
+    document.getElementById('t5').value="False";
+    }
+    function select4(){
+      document.getElementById('temp1').style.opacity = "1";
+      document.getElementById('temp2').style.opacity = "1";
+      document.getElementById('temp3').style.opacity = "1";
+      document.getElementById('temp4').style.opacity = "0.3";
+      document.getElementById('temp5').style.opacity = "1";
+      document.getElementById('t1').value="False";
+    document.getElementById('t2').value="False";
+    document.getElementById('t3').value="False";
+    document.getElementById('t4').value="True";
+    document.getElementById('t5').value="False";
+    }
+    function select5(){
+      document.getElementById('temp1').style.opacity = "1";
+      document.getElementById('temp2').style.opacity = "1";
+      document.getElementById('temp3').style.opacity = "1";
+      document.getElementById('temp4').style.opacity = "1";
+      document.getElementById('temp5').style.opacity = "0.3";
+      document.getElementById('t1').value="False";
+    document.getElementById('t2').value="False";
+    document.getElementById('t3').value="False";
+    document.getElementById('t4').value="False";
+    document.getElementById('t5').value="True";
+    }
+
+  </script>
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"
+></script>
+</body>
+
+</html>
